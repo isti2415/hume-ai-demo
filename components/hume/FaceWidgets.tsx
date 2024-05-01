@@ -281,14 +281,14 @@ export function FaceWidgets({ onCalibrate }: FaceWidgetsProps) {
           width={500}
           height={375}
         />
-        <div className="flex items-center justify-between mb-4 text-foreground w-full">
+        <div className="flex items-center justify-between mb-4 text-foreground w-[400px]">
           <h2 className="text-2xl font-bold">Status</h2>
           <Badge variant={"outline"} className={currentStatus.bgColor}>
             {currentStatus.title}
           </Badge>
         </div>
         {!onCalibrate && (
-          <div className=" w-full md:w-[400px] flex flex-col items-center justify-center">
+          <div className="w-full md:w-[400px] flex flex-col items-center justify-center">
             <div className="flex items-center justify-center gap-4">
               <TopEmotions emotions={emotions} />
               <LoaderSet

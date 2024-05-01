@@ -22,9 +22,9 @@ export function TopEmotions({
           .sort((a: Emotion, b: Emotion) => b.score - a.score)
           .slice(0, numEmotions)
           .map((emotion, i) => (
-            <Badge key={i} variant={"outline"} className="flex items-center gap-2 text-lg p-2">
+            <Badge key={i} variant={"outline"} className="flex items-center gap-2 text-lg">
               <span>{emotion.name}</span>
-              <span>{emotion.score.toFixed(3)}</span>
+              <span>{emotion.score.toFixed(1)}</span>
             </Badge>
           ))}
     </div>
