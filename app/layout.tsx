@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import Nav from "@/components/navigation-menu";
 import { Auth } from "@/components/hume/Auth";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -40,6 +42,8 @@ export default function RootLayout({
             <div className="mt-8">{children}</div>
           </Auth>
         </ThemeProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

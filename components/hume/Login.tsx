@@ -27,8 +27,8 @@ export function Login({ authenticate }: LoginProps) {
     <div className="container mx-auto max-w-md py-8">
       <Card>
         <CardHeader>
-          <CardTitle>Hume API Demo</CardTitle>
-          <CardDescription>Enter your Hume API Key below.</CardDescription>
+          <CardTitle>Hume AI Demo</CardTitle>
+          <CardDescription>Enter your Hume API Key below to get started.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
