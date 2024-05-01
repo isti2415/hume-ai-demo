@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   },
   description:
     "An intelligent web application built with Next.js, TypeScript, Tailwind CSS, and the Hume AI React SDK, showcasing the power of AI in modern web development.",
+  openGraph: {
+    images: "/opengraph-image.png"
+  },
   twitter: {
     card: "summary_large_image",
   },
