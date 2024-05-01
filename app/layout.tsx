@@ -24,15 +24,21 @@ export const metadata: Metadata = {
       "An intelligent web application built with Next.js, TypeScript, Tailwind CSS, and the Hume AI React SDK, showcasing the power of AI in modern web development.",
     type: "website",
     url: "https://humeaidemo.vercel.app",
+    images: [
+      {
+        alt: "...",
+        width: 1200,
+        height: 630,
+        url: "/opengraph-image.jpg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hume AI Demo: Intelligent Web App with Next.js",
     description:
       "An intelligent web application built with Next.js, TypeScript, Tailwind CSS, and the Hume AI React SDK, showcasing the power of AI in modern web development.",
-    images: [
-      "https://github.com/isti2415/hume-ai-demo/blob/c8df06715b6ca3274b033ee0088a666cc6e01d13/app/opengraph-image.png?raw=true",
-    ],
+    images: [{ url: "/opengraph-image.jpg" }],
   },
 };
 
