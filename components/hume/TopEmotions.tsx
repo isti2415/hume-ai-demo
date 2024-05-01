@@ -17,10 +17,7 @@ export function TopEmotions({
   className = className || "";
 
   return (
-    <div className={cn("flex flex-col items-center gap-4", className)}>
-      <span className="text-xl font-bold">Emotions detected</span>
-      <Separator />
-      <div className="flex flex-col items-center justify-center gap-4">
+    <div className={cn("flex flex-col items-center gap-2", className)}>
         {emotions
           .sort((a: Emotion, b: Emotion) => b.score - a.score)
           .slice(0, numEmotions)
@@ -30,7 +27,6 @@ export function TopEmotions({
               <span>{emotion.score.toFixed(3)}</span>
             </Badge>
           ))}
-      </div>
     </div>
   );
 }

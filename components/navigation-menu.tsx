@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,8 +14,11 @@ import { Button } from "./ui/button";
 import { Home, LogOut } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
+import { AuthContext } from "./hume/Auth";
 
 function Nav() {
+  const authContext = useContext(AuthContext);
+
   const models = [
     {
       title: "Facial Expression",
@@ -62,7 +65,9 @@ function Nav() {
       <NavigationMenu className="justify-self-center">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Expression Measurement</NavigationMenuTrigger>
+            <NavigationMenuTrigger>
+              Expression Measurement
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[280px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[550px]">
                 {models.map((model) => (
@@ -81,7 +86,11 @@ function Nav() {
       </NavigationMenu>
       <div className="flex items-center gap-2 justify-self-end">
         <ModeToggle />
-        <Button variant={"destructive"} size={"icon"}>
+        <Button
+          variant={"destructive"}
+          size={"icon"}
+          onClick={authContext.unauthenticate}
+        >
           <LogOut />
           <span className="sr-only">Logout</span>
         </Button>
