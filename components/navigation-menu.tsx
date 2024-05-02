@@ -77,7 +77,7 @@ function Nav() {
           </h1>
         </div>
       </Link>
-      <NavigationMenu className="justify-self-center">
+      <NavigationMenu className="justify-self-center pr-4 md:pr-0">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>{navText}</NavigationMenuTrigger>{" "}
