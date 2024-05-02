@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://humeaidemo.vercel.app"),
+  metadataBase: new URL("https://humeaidemo.online"),
   title: {
     default: "Hume AI Demo: Intelligent Web App with Next.js",
     template: "%s - Hume AI Demo",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       "An intelligent web application built with Next.js, TypeScript, Tailwind CSS, and the Hume AI React SDK, showcasing the power of AI in modern web development.",
     type: "website",
-    url: "https://humeaidemo.vercel.app",
+    url: "https://humeaidemo.online",
     images: [
       {
         alt: "...",
