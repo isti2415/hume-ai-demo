@@ -1,5 +1,10 @@
 "use client";
 import { FaceWidgets } from "@/components/hume/FaceWidgets";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Facial Expression"
+  }
 
 export default function FacialExpression() {
 

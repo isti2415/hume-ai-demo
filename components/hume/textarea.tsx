@@ -39,6 +39,7 @@ export function TextArea({
         placeholder={placeholder}
         onInput={onInput}
         readOnly={readOnly}
+        rows={8}
       />
     </div>
   );

@@ -12,6 +12,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://humeaidemo.vercel.app"),
   title: {
     default: "Hume AI Demo: Intelligent Web App with Next.js",
     template: "%s - Hume AI Demo",

@@ -8,7 +8,6 @@ import { DiscreteTimeline } from "./DiscreteTimeline";
 import { TopEmotions } from "./TopEmotions";
 import { blobToBase64 } from "@/lib/utilities/blobUtilities";
 import { getApiUrlWs } from "@/lib/utilities/environmentUtilities";
-import { MicIcon, SpeakerIcon, WavesIcon } from "lucide-react";
 import { Badge } from "../ui/badge";
 
 interface AudioWidgetsProps {
