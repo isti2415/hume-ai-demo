@@ -9,5 +9,5 @@ export default function WrittenLanguageLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return { children };
+  return <div>{children}</div>;
 }
