@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,20 +11,23 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Home, LogOut } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
 import { AuthContext } from "./hume/Auth";
+import { usePathname } from "next/navigation"; // Import the useRouter hook
 
 function Nav() {
   const authContext = useContext(AuthContext);
+  const pathname = usePathname(); // Get the router object
+  const [navText, setNavText] = useState("Explore Models"); // Default text
 
   const models = [
     {
       title: "Facial Expression",
       href: "/facial-expression",
       description:
-        "Analyze subtle facial cues to understand emotions. Detect joy, sadness, anger, surprise, fear, and other nuanced expressions",
+        "Analyze subtle facial cues to understand emotions. Detect joy, sadness, anger, surprise, fear, and other nuanced expressions.",
     },
     {
       title: "Speech Prosody",
@@ -46,6 +49,18 @@ function Nav() {
     },
   ];
 
+  useEffect(() => {
+    // This effect runs when the component mounts and when the pathname changes
+    const currentPath = pathname; // Get the current pathname
+    const matchingModel = models.find((model) => model.href === currentPath);
+
+    if (matchingModel) {
+      setNavText(matchingModel.title); // Set the navText to the matching model title
+    } else {
+      setNavText("Explore Models"); // Fallback text if no match
+    }
+  }, [pathname]); // This effect re-runs when the pathname changes
+
   return (
     <div className="bg-card container fixed border-b h-16 grid grid-cols-3 items-center justify-between z-50 w-screen">
       <Link href={"/"}>
@@ -65,9 +80,8 @@ function Nav() {
       <NavigationMenu className="justify-self-center">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              Expression Measurement
-            </NavigationMenuTrigger>
+            <NavigationMenuTrigger>{navText}</NavigationMenuTrigger>{" "}
+            {/* Updated navText */}
             <NavigationMenuContent>
               <ul className="grid w-[280px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[550px]">
                 {models.map((model) => (
