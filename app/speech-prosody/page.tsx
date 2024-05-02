@@ -1,10 +1,6 @@
-"use client";
-import { AudioWidgets } from "@/components/hume/AudioWidgets";
-import { Metadata } from "next";
+"use client"
 
-export const metadata: Metadata = {
-  title: "Speech Prosody"
-}
+import { AudioWidgets } from "@/components/hume/AudioWidgets";
 
 export default function SpeechProsody() {
   return (

@@ -3,11 +3,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BurstWidgets } from "@/components/hume/BurstWidgets";
 import { AudioPrediction } from "@/lib/data/audioPrediction";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Vocal Burst"
-}
 
 export default function VocalBurst() {
   function onTimeline(newPredictions: AudioPrediction[]): void {}

@@ -1,9 +1,6 @@
-import LanguageWidgets from "@/components/hume/LanguageWidgets";
-import { Metadata } from "next";
+"use client"
 
-export const metadata: Metadata = {
-  title: "Written Language"
-}
+import LanguageWidgets from "@/components/hume/LanguageWidgets";
 
 export default function WrittenLanguage() {
   return (
