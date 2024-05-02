@@ -8,6 +8,7 @@ import { Auth } from "@/components/hume/Auth";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/Footer";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -52,14 +53,17 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-background text-foreground antialiased flex flex-col items-center",
+          "bg-background text-foreground antialiased",
           urbanist.className
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Auth>
-            <Nav />
-            <div className="mt-8">{children}</div>
+            <div className="flex flex-col items-center">
+              <Nav />
+              <div className="-mt-16 pt-24 min-h-screen">{children}</div>
+              <Footer/>
+            </div>
           </Auth>
         </ThemeProvider>
         <SpeedInsights />

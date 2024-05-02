@@ -61,7 +61,7 @@ export function Loader({
     <div className={`flex items-center ${className}`}>
       <div className="flex">
         {indicators.map((indicator, i) => {
-          const color = indicator ? "bg-muted" : "bg-muted-foreground";
+          const color = indicator ? "bg-muted-foreground" : "bg-muted";
           return (
             <div
               key={i}
