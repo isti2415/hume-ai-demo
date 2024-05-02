@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 const BASE_URL =
   process.env.NODE_ENV === "production"
-    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+    ? "https://humeaidemo.vercel.app"
     : "http://localhost:3000";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
