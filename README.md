@@ -231,7 +231,7 @@ bun run export
 
 ## 🧾 License
 
-Licensed under the **MIT License**. See `LICENSE` (add if not present).
+Licensed under the **MIT License**. See `LICENSE`.
 
 ---
 
